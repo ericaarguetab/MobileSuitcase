@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileSuitcase.BackEnd", "MobileSuitcase.BackEnd\MobileSuitcase.BackEnd.csproj", "{9A53EC08-FE0F-4902-BB31-520E756DC806}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileSuitcase.BackEnd", "MobileSuitcase.BackEnd\MobileSuitcase.BackEnd.csproj", "{9A53EC08-FE0F-4902-BB31-520E756DC806}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileSuitcase.Entities", "MobileSuitcase.Entities\MobileSuitcase.Entities.csproj", "{B1BCBEFB-C752-44A5-878F-54D795284548}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9A53EC08-FE0F-4902-BB31-520E756DC806}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A53EC08-FE0F-4902-BB31-520E756DC806}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A53EC08-FE0F-4902-BB31-520E756DC806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BCBEFB-C752-44A5-878F-54D795284548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BCBEFB-C752-44A5-878F-54D795284548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BCBEFB-C752-44A5-878F-54D795284548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BCBEFB-C752-44A5-878F-54D795284548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
