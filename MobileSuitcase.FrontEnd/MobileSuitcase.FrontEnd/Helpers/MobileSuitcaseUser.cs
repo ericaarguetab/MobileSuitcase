@@ -6,7 +6,7 @@ namespace MobileSuitcase.FrontEnd.Helpers
 {
     public class MobileSuitcaseUser
     {
-        private static string SessionKey = "__MobileSuitcaseUser__";
+        private static string SessionKey = "__MobileSuitcaseWebUser__";
 
         public static User Session
         {

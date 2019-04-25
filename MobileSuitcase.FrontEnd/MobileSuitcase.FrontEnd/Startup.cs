@@ -75,9 +75,12 @@ namespace MobileSuitcase.FrontEnd
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
             app.UseHttpsRedirection();
+            app.UseSession();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseStaticHttpContext();
 
             app.UseMvc(routes =>
             {

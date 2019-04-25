@@ -5,6 +5,7 @@ using MobileSuitcase.Entities.Models;
 
 namespace MobileSuitcase.FrontEnd.Controllers
 {
+    [Route("[controller]")]
     public class WorkerController : ApplicationController
     {
         [HttpGet("[action]")]

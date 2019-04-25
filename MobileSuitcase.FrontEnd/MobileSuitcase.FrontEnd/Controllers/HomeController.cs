@@ -8,7 +8,7 @@ using MobileSuitcase.FrontEnd.Models;
 
 namespace MobileSuitcase.FrontEnd.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : ApplicationController
     {
         public IActionResult Index()
         {
