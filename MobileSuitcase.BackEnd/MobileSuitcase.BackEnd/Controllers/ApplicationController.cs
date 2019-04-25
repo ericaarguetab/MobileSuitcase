@@ -8,11 +8,11 @@ namespace MobileSuitcase.BackEnd.Controllers
 {
     public class ApplicationController : Controller
     {
-        protected UnitOfWork unitOfWork;
+        protected UnitOfWork UnitOfWork;
 
         public ApplicationController()
         {
-            this.unitOfWork = new UnitOfWork();
+            this.UnitOfWork = new UnitOfWork();
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace MobileSuitcase.BackEnd.Controllers
 
         public override void OnActionExecuted(ActionExecutedContext ctx)
         {
-            unitOfWork.Dispose();
+            UnitOfWork.Dispose();
         }
     }
 }

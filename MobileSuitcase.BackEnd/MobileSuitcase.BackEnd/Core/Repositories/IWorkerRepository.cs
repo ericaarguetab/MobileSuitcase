@@ -1,11 +1,13 @@
-﻿using System;
+﻿using MobileSuitcase.Entities.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net;
+
 
 namespace MobileSuitcase.BackEnd.Core.Repositories
 {
-    public interface IWorkerRepository
+    public interface IWorkerRepository : IRepository<Worker>
     {
+        (HttpStatusCode ResponseCode, string ResponseText, List<Worker>) GetWorkers();
     }
 }

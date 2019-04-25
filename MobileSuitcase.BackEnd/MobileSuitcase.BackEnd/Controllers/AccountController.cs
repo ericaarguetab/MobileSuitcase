@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+﻿using Microsoft.AspNetCore.Mvc;
+using MobileSuitcase.Entities.ViewModels;
 
 namespace MobileSuitcase.BackEnd.Controllers
 {
-    public class AccountController : Controller
+    [Route("api/[controller]")]
+    public class AccountController : ApplicationController
     {
-        // GET: /<controller>/
-        public IActionResult Index()
+        [HttpPost("[action]")]
+        public IActionResult Login([FromBody] LoginViewModel UserToLogin)
         {
-            return View();
+            var (ResponseCode, ResponseText, UserLogged) = UnitOfWork.Users.LoginAsync(UserToLogin);
+            return CreateResponse(ResponseCode, ResponseText, UserLogged);
         }
     }
 }
