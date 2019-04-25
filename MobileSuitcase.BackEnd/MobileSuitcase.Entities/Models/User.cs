@@ -1,7 +1,6 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace MobileSuitcase.Entities
+namespace MobileSuitcase.Entities.Models
 {
     public class User
     {

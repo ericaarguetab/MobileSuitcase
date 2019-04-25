@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace MobileSuitcase.Entities.Models
+﻿namespace MobileSuitcase.Entities.Models
 {
-    class Worker
+    public class Worker
     {  
         public string FirstName { get; set; }
 
