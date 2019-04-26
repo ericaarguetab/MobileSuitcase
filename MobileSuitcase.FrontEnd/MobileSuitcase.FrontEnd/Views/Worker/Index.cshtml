@@ -1,6 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Index";
+﻿@using MobileSuitcase.Entities.Models
+@model List<Worker>
+@{
+    ViewData["Title"] = "Colaboradores de Mobile SuitCase";
 }
 
-<h2>Index</h2>
+<h2>Colaboradores de Mobile SuitCase</h2>
 
+<div class="overflow_auto">
+    <table class="">
+        <thead class="">
+            <tr class="">
+                <th class="">Nombre</th>
+                <th class="">Apellido</th>
+                <th class="">Cargo</th>
+                <th class="">Edad</th>
+                <th class="">Imagen</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.Count > 0)
+            {
+                foreach (var item in Model)
+                {
+                    <tr class="">
+                        <td class="">@item.FirstName</td>
+                        <td class="">@item.LastName</td>
+                        <td class="">@item.Position</td>
+                        <td class="">@item.Age</td>
+                        <td class=""><img src="@item.ImagePath" style="width:100px; height:100px"/></td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td class="" colspan="5">No existen registros.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
