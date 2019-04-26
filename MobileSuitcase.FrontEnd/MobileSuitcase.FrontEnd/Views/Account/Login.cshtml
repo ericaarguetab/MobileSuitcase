@@ -3,21 +3,9 @@
 @{
     ViewData["Title"] = "Iniciar sesión";
 }
-    
-<style type="text/css">
-    body {
-        font-family: Arial;
-        font-size: 10pt;
-    }
 
-    inputuser {
-        margin-left: 35px;
-    }
-</style>
-    
-    <div style="padding=20px">
-
-    <div class=" container text-center" style="margin-top:20px">
+<div class="margin_auto w_25p">
+    <div class=" text-center mar_t_20 mar_b_20">
         <h4>INICIO DE SESIÓN</h4>
         <h5>Por favor ingrese sus credenciales</h5>
     </div>
@@ -27,27 +15,27 @@
         @Html.AntiForgeryToken()
         @Html.ValidationSummary("", new { @class = "" })
 
-        <div style="margin-bottom: 25px; margin-left: 440px">
-            <div class="">
+        <div class="form-group">
+            <div>
                 @Html.LabelFor(m => m.UserName, "Usuario: ", new { @class = "" })
-                @Html.TextBoxFor(m => m.UserName, new { @class = "inputuser", @id = "UserName", @required = "true", oninvalid = "this.setCustomValidity('Este campo es requerido.')", oninput = "this.setCustomValidity('')", title = "Este campo es requerido." })
+                @Html.TextBoxFor(m => m.UserName, new { @class = "", @id = "UserName", @required = "true", oninvalid = "this.setCustomValidity('Este campo es requerido.')", oninput = "this.setCustomValidity('')", title = "Este campo es requerido." })
                 @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "" })
 
                 @*<div class="absolute top_1_240_st right_0_240_st icon_input trans_03">
                         <label for="UserName" class="material-icons fs_1 c_gray3 trans_03">person</label>
                     </div>*@
             </div>
+        </div>
 
-            <div class="">
-                @Html.LabelFor(m => m.Password, "Contraseña: ", new { @class = "" })
-                @Html.PasswordFor(m => m.Password, new { @class = "", @id = "Password", @required = "true", pattern = ".{8,}", oninvalid = "this.setCustomValidity('Este campo es requerido.')", oninput = "this.setCustomValidity('')", title = "Este campo es requerido.", MaxLength = 12 })
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, "Contraseña: ", new { @class = "" })
+            @Html.PasswordFor(m => m.Password, new { @class = "", @id = "Password", @required = "true", pattern = ".{8,}", oninvalid = "this.setCustomValidity('Este campo es requerido.')", oninput = "this.setCustomValidity('')", title = "Este campo es requerido.", MaxLength = 12 })
 
-                <span class="helper-text" data-error="Debe tener al menos 8 caracteres" data-success="¡Listo!"></span>
+            <span class="helper-text" data-error="Debe tener al menos 8 caracteres" data-success="¡Listo!"></span>
 
-                @*<div class="absolute top_1_240_st right_0_240_st icon_input trans_03">
-                        <label for="pass" class="material-icons fs_1 c_gray3 trans_03">vpn_key</label>
-                    </div>*@
-            </div>
+            @*<div class="absolute top_1_240_st right_0_240_st icon_input trans_03">
+                    <label for="pass" class="material-icons fs_1 c_gray3 trans_03">vpn_key</label>
+                </div>*@
         </div>
 
         <div class="text-center" style="margin-bottom:20px">
@@ -55,6 +43,6 @@
                 <span class="pad_lr_05 block black uppercase lh_15">Iniciar sesión</span>
             </button>
         </div>
+
     }
-</div>
 </div>

@@ -1,14 +1,15 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MobileSuitcase.Entities.Models;
+﻿using MobileSuitcase.Entities.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Xunit;
 
-namespace MobileSuitcase.EntitiesTest
+namespace MobileSuitcase.EntitiesTest2
 {
-    [TestClass]
     public class WorkerTest
     {
-        [TestMethod]
-        public void WorkerEntity()
+        [Fact]
+        public void WorkerEntityTest()
         {
             string FirstName = "Miguel";
             string LastName = "Espinoza";
@@ -25,11 +26,12 @@ namespace MobileSuitcase.EntitiesTest
                 Age = Age
             };
 
-            Assert.AreEqual(colaborador.FirstName, FirstName);
-            Assert.AreEqual(colaborador.LastName, LastName);
-            Assert.AreEqual(colaborador.ImagePath, ImagePath);
-            Assert.AreEqual(colaborador.Position, Position);
-            Assert.AreEqual(colaborador.Age, Age);
+            Assert.Equal(colaborador.FirstName, FirstName);
+            Assert.Equal(colaborador.LastName, LastName);
+            Assert.Equal(colaborador.ImagePath, ImagePath);
+            Assert.Equal(colaborador.Position, Position);
+            Assert.Equal(colaborador.Age, Age);
+
         }
     }
 }

@@ -23,7 +23,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "María",
                     LastName = "López",
                     Age = 29,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/women/10.jpg",
                     Position = "Full Stack Developer"
                 },
 
@@ -32,7 +32,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Carlos",
                     LastName = "Pérez",
                     Age = 20,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/10.jpg",
                     Position = "Junior Developer"
                 },
 
@@ -41,7 +41,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Pedro",
                     LastName = "Soza",
                     Age = 30,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/36.jpg",
                     Position = "Project Manager"
                 },
 
@@ -50,7 +50,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Roberto",
                     LastName = "Martínez",
                     Age = 34,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/34.jpg",
                     Position = "Lead Developer"
                 },
 
@@ -59,7 +59,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Luis",
                     LastName = "Fernández",
                     Age = 33,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/33.jpg",
                     Position = "Senior Developer"
                 },
 
@@ -68,7 +68,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Juan",
                     LastName = "Solís",
                     Age = 31,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/25.jpg",
                     Position = "Commercial Manager"
                 },
 
@@ -77,7 +77,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Lucía",
                     LastName = "Hernández",
                     Age = 28,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/women/31.jpg",
                     Position = "Sales Coordinator"
                 },
 
@@ -86,7 +86,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "José",
                     LastName = "Rodríguez",
                     Age = 28,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/15.jpg",
                     Position = "QA Leader"
                 },
 
@@ -95,7 +95,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Francisco",
                     LastName = "Navarro",
                     Age = 26,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/43.jpg",
                     Position = "QA Developer"
                 },
 
@@ -104,7 +104,7 @@ namespace MobileSuitcase.BackEnd.Persistance.Repositories
                     FirstName = "Marcos",
                     LastName = "Alfaro",
                     Age = 34,
-                    ImagePath = "https://thispersondoesnotexist.com/image",
+                    ImagePath = "https://randomuser.me/api/portraits/men/44.jpg",
                     Position = "General Manager"
                 },
 

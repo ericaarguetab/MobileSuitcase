@@ -1,13 +1,13 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MobileSuitcase.Entities.Models;
+using System;
+using Xunit;
 
-namespace MobileSuitcase.EntitiesTest
+namespace MobileSuitcase.EntitiesTest2
 {
-    [TestClass]
     public class UserTest
     {
-        [TestMethod]
-        public void UserEntity()
+        [Fact]
+        public void UserEntityTest()
         {
             string UserName = "admin@mobilesuitcase.com";
             string Email = "admin@mobilesuitcase.com";
@@ -24,11 +24,11 @@ namespace MobileSuitcase.EntitiesTest
                 LastName = LastName
             };
 
-            Assert.AreEqual(usuario.UserName, UserName);
-            Assert.AreEqual(usuario.Email, Email);
-            Assert.AreEqual(usuario.Password, Password);
-            Assert.AreEqual(usuario.FirstName, FirstName);
-            Assert.AreEqual(usuario.LastName, LastName);
+            Assert.Equal(usuario.UserName, UserName);
+            Assert.Equal(usuario.Email, Email);
+            Assert.Equal(usuario.Password, Password);
+            Assert.Equal(usuario.FirstName, FirstName);
+            Assert.Equal(usuario.LastName, LastName);
 
         }
     }

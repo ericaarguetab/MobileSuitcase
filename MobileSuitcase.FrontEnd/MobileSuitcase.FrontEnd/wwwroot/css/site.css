@@ -3,6 +3,8 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: Arial;
+    font-size: 10pt;
 }
 
 /* Wrapping element */
@@ -34,4 +36,48 @@ body {
     .carousel-caption {
         display: none;
     }
+}
+
+.inputuser {
+    margin-left: 35px;
+}
+
+.margin_auto {
+    margin: auto;
+}
+
+.w_25p {
+    width: 25%
+}
+
+.mar_t_20 {
+    margin-top: 20px;
+}
+
+.mar_b_20 {
+    margin-bottom: 20px;
+}
+
+.rounded_img {
+    border-radius: 50%;
+}
+
+.v_middle {
+    vertical-align: middle;
+}
+
+tbody > tr.v_middle > td {
+    vertical-align: middle;
+}
+
+.align_center {
+    text-align: center;
+}
+
+th.align_center {
+    text-align: center;
+}
+
+ul > li.mar_t_20 {
+    margin-top: 20px;
 }
