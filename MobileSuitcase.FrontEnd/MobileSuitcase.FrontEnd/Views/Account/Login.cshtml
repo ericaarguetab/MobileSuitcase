@@ -4,45 +4,56 @@
     ViewData["Title"] = "Iniciar sesión";
 }
 
-<div class="margin_auto w_25p">
-    <div class=" text-center mar_t_20 mar_b_20">
+<div class="margin_auto w_50p">
+    <div class=" text-center mar_t_20 mar_b_20 ">
         <h4>INICIO DE SESIÓN</h4>
         <h5>Por favor ingrese sus credenciales</h5>
     </div>
 
-    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, null, new { @class = "needs-validation", novalidate = true }))
     {
         @Html.AntiForgeryToken()
-        @Html.ValidationSummary("", new { @class = "" })
+        @Html.ValidationSummary("", new { @class = "text_red text-left no_list" })
 
         <div class="form-group">
-            <div>
-                @Html.LabelFor(m => m.UserName, "Usuario: ", new { @class = "" })
-                @Html.TextBoxFor(m => m.UserName, new { @class = "", @id = "UserName", @required = "true", oninvalid = "this.setCustomValidity('Este campo es requerido.')", oninput = "this.setCustomValidity('')", title = "Este campo es requerido." })
-                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "" })
-
-                @*<div class="absolute top_1_240_st right_0_240_st icon_input trans_03">
-                        <label for="UserName" class="material-icons fs_1 c_gray3 trans_03">person</label>
-                    </div>*@
-            </div>
+            <label for="UserName">Usuario: </label>
+            <input type="text" asp-for="UserName" class="form-control" id="UserName" required pattern="^[a-zA-Z0-9._%+-]+@@[A-Za-z0-9.-]+\.[a-zA-Z]{2,3}$" oninvalid="this.setCustomValidity('Este campo es requerido.')" oninput="this.setCustomValidity('')" title="Este campo es requerido." placeholder="Ingrese su correo electrónico" />
+            <span class="invalid-feedback">Debe poseer formato de correo.</span>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(m => m.Password, "Contraseña: ", new { @class = "" })
-            @Html.PasswordFor(m => m.Password, new { @class = "", @id = "Password", @required = "true", pattern = ".{8,}", oninvalid = "this.setCustomValidity('Este campo es requerido.')", oninput = "this.setCustomValidity('')", title = "Este campo es requerido.", MaxLength = 12 })
-
-            <span class="helper-text" data-error="Debe tener al menos 8 caracteres" data-success="¡Listo!"></span>
-
-            @*<div class="absolute top_1_240_st right_0_240_st icon_input trans_03">
-                    <label for="pass" class="material-icons fs_1 c_gray3 trans_03">vpn_key</label>
-                </div>*@
+            <label for="Password">Contraseña:</label>
+            <input type="password" asp-for="Password" class="form-control" id="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\$\^\&\)\(!@@#%*/+=._-])\S{8,16}$" oninvalid = "this.setCustomValidity('Este campo es requerido.')" oninput= "this.setCustomValidity('')" title= "Este campo es requerido." placeholder= "Ingrese su contraseña" />
+            <span class="invalid-feedback">La contraseña debe contener de 8 a 12 caracteres incluyendo mayúsculas, minúsculas y símbolos.</span>
         </div>
 
-        <div class="text-center" style="margin-bottom:20px">
-            <button type="submit" class="btn btn-light">
-                <span class="pad_lr_05 block black uppercase lh_15">Iniciar sesión</span>
-            </button>
+        <div class="text-center mar_b_20">
+            <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         </div>
 
     }
+
 </div>
+
+@section Scripts{
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+}

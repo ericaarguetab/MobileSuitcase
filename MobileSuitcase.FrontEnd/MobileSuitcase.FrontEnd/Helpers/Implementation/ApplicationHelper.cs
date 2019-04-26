@@ -12,7 +12,7 @@ namespace MobileSuitcase.FrontEnd.Helpers.Implementation
 {
     public class ApplicationHelper : IApplicationHelper
     {
-        public static string UrlWebApi { get; set; } = string.Empty;
+        public static string UrlWebApi { get; set; } = "https://localhost:44314/api";
         private HttpClient client = new HttpClient();
 
         public async Task<(HttpStatusCode ResponseCode, string ResponseText, T ResultingObject)> CallGetApi<T>(string RequestUrl)
