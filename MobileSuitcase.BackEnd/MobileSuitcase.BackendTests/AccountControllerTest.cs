@@ -1,21 +1,20 @@
-﻿using System;
-using System.Net.Http;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MobileSuitcase.BackEnd.Controllers;
 using MobileSuitcase.Entities.ViewModels;
+using System;
+using System.Net.Http;
+using Xunit;
 
-namespace MobileSuitcase.BackEnd.Tests
+namespace MobileSuitcase.BackEndTests
 {
-    [TestClass]
     public class AccountControllerTest
     {
-
-        AccountController AccountEntity;
-        HttpClient Client;
-        LoginViewModel Usuario;
-
-        public AccountControllerTest()
+        [Fact]
+        public void LoginTest()
         {
+            AccountController AccountEntity;
+            HttpClient Client;
+            LoginViewModel Usuario;
+
             AccountEntity = new AccountController();
             Client = new HttpClient();
 
@@ -24,14 +23,10 @@ namespace MobileSuitcase.BackEnd.Tests
                 UserName = "erica@mobilesuitcase.com",
                 Password = "Abc123."
             };
-        } 
 
-
-        [TestMethod]
-        public void LoginTest()
-        {
             var response = AccountEntity.Login(Usuario);
-            Assert.IsNotNull(response);
+            Assert.NotNull(response);
+
 
         }
     }

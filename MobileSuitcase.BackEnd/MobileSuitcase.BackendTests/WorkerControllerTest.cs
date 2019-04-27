@@ -1,12 +1,7 @@
 ﻿using MobileSuitcase.BackEnd.Controllers;
-using MobileSuitcase.Entities.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
 using Xunit;
 
-namespace MobileSuitcase.BackEnd.Tests2
+namespace MobileSuitcase.BackEndTests
 {
     public class WorkerControllerTest
     {

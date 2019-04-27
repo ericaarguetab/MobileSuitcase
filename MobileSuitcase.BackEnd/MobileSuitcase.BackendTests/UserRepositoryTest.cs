@@ -3,7 +3,7 @@ using MobileSuitcase.Entities.ViewModels;
 using Xunit;
 using static System.Net.HttpStatusCode;
 
-namespace MobileSuitcase.BackEnd.Tests2
+namespace MobileSuitcase.BackEndTests
 {
     public class UserRepositoryTest
     {
@@ -35,7 +35,7 @@ namespace MobileSuitcase.BackEnd.Tests2
 
             var (ResponseCode, ResponseText, Resulting) = UserRepositorio.LoginAsync(UsuarioIncorrecto);
             Assert.False(ResponseCode == OK);
-            Assert.Contains("Usuario o contraseña incorrectos",ResponseText);
+            Assert.Contains("Usuario o contraseña incorrectos", ResponseText);
             Assert.Null(Resulting);
         }
 

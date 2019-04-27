@@ -2,7 +2,7 @@ using MobileSuitcase.Entities.Models;
 using System;
 using Xunit;
 
-namespace MobileSuitcase.EntitiesTest2
+namespace MobileSuitcase.EntitiesTests
 {
     public class UserTest
     {

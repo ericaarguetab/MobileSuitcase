@@ -5,7 +5,7 @@ using System.Text;
 using Xunit;
 using static System.Net.HttpStatusCode;
 
-namespace MobileSuitcase.BackEnd.Tests2
+namespace MobileSuitcase.BackEndTests
 {
     public class WorkerRepositoryTest
     {
