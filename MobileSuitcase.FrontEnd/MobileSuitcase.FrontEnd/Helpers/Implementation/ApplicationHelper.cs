@@ -56,35 +56,5 @@ namespace MobileSuitcase.FrontEnd.Helpers.Implementation
                 return (InternalServerError, ex.Message, Activator.CreateInstance<T>());
             }
         }
-
-        public async Task<(HttpStatusCode ResponseCode, string ResponseText)> CallPostApi(string RequestUrl, object obj)
-        {
-            try
-            {
-                using (HttpResponseMessage result = await client.PostAsJsonAsync(string.Format("{0}/{1}", UrlWebApi, RequestUrl), obj))
-                {
-                    return (result.StatusCode, result.StatusCode == InternalServerError ? "Ha ocurrido un error inesperado." : await result.Content.ReadAsStringAsync());
-                }
-            }
-            catch (Exception ex)
-            {
-                return (InternalServerError, ex.Message);
-            }
-        }
-
-        public async Task<(HttpStatusCode ResponseCode, string ResponseText)> CallPutApi(string RequestUrl, object obj)
-        {
-            try
-            {
-                using (HttpResponseMessage result = await client.PutAsJsonAsync(string.Format("{0}/{1}", UrlWebApi, RequestUrl), obj))
-                {
-                    return (result.StatusCode, result.StatusCode == InternalServerError ? "Ha ocurrido un error inesperado." : await result.Content.ReadAsStringAsync());
-                }
-            }
-            catch (Exception ex)
-            {
-                return (InternalServerError, ex.Message);
-            }
-        }
     }
 }

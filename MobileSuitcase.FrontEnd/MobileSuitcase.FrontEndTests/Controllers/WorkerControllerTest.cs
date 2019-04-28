@@ -11,16 +11,10 @@ namespace MobileSuitcase.FrontEndTests.Controllers
     public class WorkerControllerTest
     {
         WorkerController Colaborador;
-        LoginViewModel Inicio;
 
         public WorkerControllerTest()
         {
             Colaborador = new WorkerController();
-            Inicio = new LoginViewModel()
-            {
-                UserName = "erica@mobilesuitcase.com",
-                Password = "Abc123."
-            };
         }
 
         [Fact]

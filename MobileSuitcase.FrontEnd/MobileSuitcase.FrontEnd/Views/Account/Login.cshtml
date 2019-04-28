@@ -17,13 +17,13 @@
 
         <div class="form-group">
             <label for="UserName">Usuario: </label>
-            <input type="text" asp-for="UserName" class="form-control" id="UserName" required pattern="^[a-zA-Z0-9._%+-]+@@[A-Za-z0-9.-]+\.[a-zA-Z]{2,3}$" oninvalid="this.setCustomValidity('Este campo es requerido.')" oninput="this.setCustomValidity('')" title="Este campo es requerido." placeholder="Ingrese su correo electrónico" />
+            <input type="text" asp-for="UserName" class="form-control" id="UserName" required pattern="[a-zA-Z0-9._%+-]+@@[A-Za-z0-9.-]+\.[a-zA-Z]{2,3}" oninvalid="this.setCustomValidity('Este campo es requerido.')" oninput="this.setCustomValidity('')" title="Este campo es requerido." placeholder="Ingrese su correo electrónico" />
             <span class="invalid-feedback">Debe poseer formato de correo.</span>
         </div>
 
         <div class="form-group">
             <label for="Password">Contraseña:</label>
-            <input type="password" asp-for="Password" class="form-control" id="Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\$\^\&\)\(!@@#%*/+=._-])\S{8,16}$" oninvalid = "this.setCustomValidity('Este campo es requerido.')" oninput= "this.setCustomValidity('')" title= "Este campo es requerido." placeholder= "Ingrese su contraseña" />
+            <input type="password" asp-for="Password" class="form-control" id="Password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[\\$\\^\\&\\)\\(!@@#%*/+=._-])\S{8,16}" oninvalid = "this.setCustomValidity('Este campo es requerido.')" oninput= "this.setCustomValidity('')" title= "Este campo es requerido." placeholder= "Ingrese su contraseña" />
             <span class="invalid-feedback">La contraseña debe contener de 8 a 12 caracteres incluyendo mayúsculas, minúsculas y símbolos.</span>
         </div>
 
@@ -37,13 +37,13 @@
 
 @section Scripts{
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        //Validación de campos incorrectos
         (function () {
             'use strict';
             window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                
                 var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
+
                 var validation = Array.prototype.filter.call(forms, function (form) {
                     form.addEventListener('submit', function (event) {
                         if (form.checkValidity() === false) {
@@ -54,6 +54,17 @@
                     }, false);
                 });
             }, false);
+
+            var inputs = document.getElementsByTagName('input');
+            if (inputs) {
+                Array.prototype.forEach.call(inputs, function (item, index) {
+                    item.addEventListener('focusout', function () {
+                        item.value = item.value.trim();
+                    });
+                });
+            }
         })();
+
+        
     </script>
 }

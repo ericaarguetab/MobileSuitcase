@@ -8,13 +8,12 @@ namespace MobileSuitcase.BackEndTests
 {
     public class AccountControllerTest
     {
-        [Fact]
-        public void LoginTest()
-        {
-            AccountController AccountEntity;
-            HttpClient Client;
-            LoginViewModel Usuario;
+        AccountController AccountEntity;
+        HttpClient Client;
+        LoginViewModel Usuario;
 
+        public AccountControllerTest()
+        {
             AccountEntity = new AccountController();
             Client = new HttpClient();
 
@@ -23,11 +22,13 @@ namespace MobileSuitcase.BackEndTests
                 UserName = "erica@mobilesuitcase.com",
                 Password = "Abc123."
             };
-
+        }
+       
+        [Fact]
+        public void LoginTest()
+        {
             var response = AccountEntity.Login(Usuario);
             Assert.NotNull(response);
-
-
         }
     }
 }

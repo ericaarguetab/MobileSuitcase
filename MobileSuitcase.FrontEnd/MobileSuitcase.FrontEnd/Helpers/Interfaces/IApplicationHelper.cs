@@ -9,8 +9,5 @@ namespace MobileSuitcase.FrontEnd.Helpers.Interfaces
 
         Task<(HttpStatusCode ResponseCode, string ResponseText, T ResultingObject)> CallPostApi<T>(string RequestUrl, object obj);
 
-        Task<(HttpStatusCode ResponseCode, string ResponseText)> CallPostApi(string RequestUrl, object obj);
-
-        Task<(HttpStatusCode ResponseCode, string ResponseText)> CallPutApi(string RequestUrl, object obj);
     }
 }

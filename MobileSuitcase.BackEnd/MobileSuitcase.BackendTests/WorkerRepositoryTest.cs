@@ -16,10 +16,14 @@ namespace MobileSuitcase.BackEndTests
             WorkerRepository WorkerRepositorio = new WorkerRepository();
 
             var (ResponseCode, ResponseText, Resulting) = WorkerRepositorio.GetWorkers();
+            Assert.Equal(ResponseCode, OK);
             Assert.True(ResponseCode == OK);
             Assert.Empty(ResponseText);
+            Assert.Equal(ResponseText, string.Empty);
+            Assert.Contains(ResponseText, string.Empty);
             Assert.NotNull(Resulting);
             Assert.True(Resulting.Count == 10);
+            Assert.False(Resulting.Count < 10);
         }
     }
 }
